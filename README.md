@@ -101,21 +101,6 @@ except DecryptionError:
 
 ---
 
-## 5. Implementation Details & Originality
-
-In accordance with the course guidelines ("*you are not allowed to simply borrow existing implementations... without adding significant values, which you must explain clearly*"), we explicitly declare the following:
-
-### What is original (written by us):
-1. **Miller-Rabin Primality Test**: Implemented from scratch, including the decomposition of \(n-1 = 2^s \cdot d\) and the witness loop.
-2. **Prime Generation**: Custom logic for securely generating odd integers in the correct bit-range and filtering them through our Miller-Rabin test.
-3. **MGF1 (Mask Generation Function)**: Implemented as a counter-based hash function wrapper.
-4. **OAEP Encoding/Decoding**: The full Feistel-network-like padding structure (`EME-OAEP-ENCODE` and `EME-OAEP-DECODE`), including strict checks for the `lHash`, the `0x01` delimiter, and the zero-padding string (`PS`).
-5. **I2OSP/OS2IP**: Custom integer-to-octet-string and octet-string-to-integer conversions with length verification.
-
-### What is third-party/standard:
-1. **SHA-256 Hash Function**: Obtained via Python's standard `hashlib` module (as explicitly permitted in the project description).
-2. **Secure Randomness**: Obtained via Python's standard `secrets` module.
-
 ### Security Warning
 This is a **proof-of-concept educational implementation**. It is **not constant-time** (meaning it does not defend against sophisticated timing side-channel attacks) and lacks advanced memory-clearing mechanisms. It should **never** be used to protect real-world sensitive data. For production environments, standard libraries such as OpenSSL or Python's `cryptography` package should be used.
 
