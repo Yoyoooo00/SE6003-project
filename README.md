@@ -5,9 +5,9 @@
 **Topic**: I2 - RSA-OAEP Implementation
 
 **Group Members**:
-- Lin Pengyu (G2606203C) - *Code Implementation*
-- [Name 2] ([Matriculation Number 2]) - *Report Writing*
-- [Name 3] ([Matriculation Number 3]) - *Video Presentation/Testing*
+- Lin Pengyu
+- Li You 
+- Zhang Jiachen
 
 ---
 
